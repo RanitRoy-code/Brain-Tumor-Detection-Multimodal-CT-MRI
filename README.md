@@ -159,6 +159,6 @@ These techniques help visualize the model's decision-making process and highligh
 
 ---
 
-# 📊 Results
+#  Results
 
 The proposed multimodal framework is designed to provide accurate and interpretable **binary brain tumor detection** by effectively leveraging complementary information from CT and MRI modalities.
