@@ -72,6 +72,7 @@ For more details, see:
 ```text
 Dataset/README.md
 ```
+> **NOTE:** Update the dataset paths inside **Model_code.ipynb** before executing the notebook.
 
 ---
 
@@ -82,21 +83,6 @@ Install all required packages using:
 ```bash
 pip install -r requirements.txt
 ```
-
----
-
-# Dataset
-
-This project uses two publicly available multimodal brain tumor datasets containing **CT** and **MRI** brain images.
-
-Complete dataset information is available in:
-
-```text
-Dataset/README.md
-```
-
-> **Important:** Update the dataset paths inside **Model_code.ipynb** before executing the notebook.
-
 ---
 
 #  Running the Project
