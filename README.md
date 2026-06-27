@@ -16,13 +16,13 @@ To improve model transparency and clinical interpretability, the framework integ
 Brain-Tumor-Detection-Multimodal-CT-MRI/
 │
 ├── Architecture/
-│   └── proposed_model_architecture.png
+│   └── model_architecture.png
 │
 ├── Dataset/
 │   └── README.md
 │
 ├── Notebook/
-│   └── Brain_Tumor_Detection_Multimodal_CT_MRI.ipynb
+│   └── MODEL_code.ipynb
 │
 ├── README.md
 └── requirements.txt
