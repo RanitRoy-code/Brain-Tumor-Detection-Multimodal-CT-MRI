@@ -4,58 +4,80 @@
 
 This repository presents an interpretable multimodal deep learning framework for **binary brain tumor detection** using **CT** and **MRI** brain images.
 
-The proposed architecture employs **Vision Mamba** as the feature extraction backbone for both imaging modalities. Modality-specific features are projected into a shared embedding space and optimized using **Supervised Contrastive Learning** to improve cross-modal representation alignment. The projected features are then processed through a **Prototype Cross-Attention** module, where learnable prototypes capture representative tumor and healthy tissue characteristics. Finally, an **L2 Distance Classifier** performs binary classification (**Healthy** or **Tumor**) based on feature-to-prototype similarity.
+The proposed framework employs **Vision Mamba** as the feature extraction backbone for both imaging modalities. Modality-specific features are projected into a shared embedding space and optimized using **Supervised Contrastive Learning** to improve cross-modal feature alignment. The aligned representations are further refined using **Prototype Cross-Attention** with learnable prototypes, followed by an **L2 Distance Classifier** for binary classification (**Healthy** or **Tumor**).
 
-To improve model transparency and clinical interpretability, the framework integrates multiple **Explainable AI (XAI)** techniques, including **Grad-CAM++**, **Attention Maps**, **Prototype Similarity Analysis**, and **UMAP Visualization**.
+To enhance model interpretability, the framework integrates multiple **Explainable AI (XAI)** techniques, including **Grad-CAM++**, **Attention Maps**, **Prototype Similarity Analysis**, and **UMAP Visualization**.
 
 ---
+
+
 
 # Repository Structure
 
 ```text
 Brain-Tumor-Detection-Multimodal-CT-MRI/
 │
-├── Architecture/
-│   └── model_architecture.png
-│
 ├── Dataset/
 │   └── README.md
 │
-├── Notebook/
-│   └── MODEL_code.ipynb
-│
-├── README.md
-└── requirements.txt
+├── Model_code.ipynb
+├── model_architecture.png
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
 # Files
 
-### Brain_Tumor_Detection_Multimodal_CT_MRI.ipynb
+## Model_code.ipynb
 
-Complete implementation of the proposed multimodal brain tumor detection framework, including:
+Contains the complete implementation of the proposed multimodal brain tumor detection framework, including:
 
-* Dataset preprocessing
-* Vision Mamba feature extraction
-* Supervised Contrastive Learning
-* Prototype Cross-Attention
-* L2 Distance Classification
-* Model training
-* Model evaluation
-* Explainable AI (Grad-CAM++, Attention Maps, Prototype Similarity, and UMAP)
-
----
-
-### proposed_model_architecture.png
-
-Visual representation of the proposed multimodal brain tumor detection architecture.
+- Data preprocessing
+- Vision Mamba feature extraction
+- Shared Projection Head
+- Supervised Contrastive Learning
+- Prototype Cross-Attention
+- Learnable Prototypes
+- L2 Distance Classification
+- Model training
+- Model evaluation
+- Explainable AI (Grad-CAM++, Attention Maps, Prototype Similarity Analysis, and UMAP Visualization)
 
 ---
 
-# Installation
+## model_architecture.png
 
-Install the required dependencies before running the notebook.
+Illustrates the complete architecture of the proposed multimodal brain tumor detection framework.
+<p align="center">
+  <img src="model_architecture.png" alt="Model Architecture" width="100%">
+</p>
+
+
+---
+
+##  Dataset
+
+Contains:
+
+- Dataset download links
+- Dataset descriptions
+- Dataset statistics
+- Directory structure
+- Setup instructions
+
+For more details, see:
+
+```text
+Dataset/README.md
+```
+
+---
+
+##  requirements.txt
+
+Install all required packages using:
 
 ```bash
 pip install -r requirements.txt
@@ -65,67 +87,78 @@ pip install -r requirements.txt
 
 # Dataset
 
-The project uses two publicly available multimodal brain tumor datasets.
+This project uses two publicly available multimodal brain tumor datasets containing **CT** and **MRI** brain images.
 
-### Dataset 1
-
-https://tinyurl.com/2rx35peu
-
-### Dataset 2
-
-https://tinyurl.com/5jfvdwr9
-
-Both datasets contain:
-
-* CT Images
-* MRI Images
-* Healthy Class
-* Tumor Class
-
-> **Important:** Update the dataset paths inside the notebook before executing the code.
-
----
-
-# Training
-
-1. Download both datasets.
-2. Update the dataset paths in the notebook.
-3. Install the required dependencies.
-4. Open:
+Complete dataset information is available in:
 
 ```text
-Brain_Tumor_Detection_Multimodal_CT_MRI.ipynb
+Dataset/README.md
 ```
 
-5. Execute the notebook sequentially from the first cell to the last.
+> **Important:** Update the dataset paths inside **Model_code.ipynb** before executing the notebook.
 
 ---
 
-# Model Components
+#  Running the Project
 
-* Vision Mamba Backbone
-* Shared Projection Head
-* Supervised Contrastive Learning
-* Prototype Cross-Attention
-* Learnable Prototypes
-* L2 Distance Classifier
-* Explainable AI (Grad-CAM++, Attention Maps, Prototype Similarity, UMAP)
+1. Download both datasets using the links provided in `Dataset/README.md`.
+2. Extract and organize the datasets.
+3. Update the dataset paths inside `Model_code.ipynb`.
+4. Install the required packages.
 
----
+```bash
+pip install -r requirements.txt
+```
 
-# Explainable AI
-
-The proposed framework provides multiple interpretability techniques:
-
-* Grad-CAM++
-* Attention Maps
-* Prototype Similarity Analysis
-* UMAP Feature Visualization
-
-These visualizations help explain the model's decision-making process and improve clinical interpretability.
+5. Open **Model_code.ipynb** using **Google Colab** or **Jupyter Notebook**.
+6. Run all notebook cells sequentially from top to bottom.
 
 ---
 
-# Results
+#  Model Components
 
-The proposed multimodal framework is designed for accurate and interpretable **binary brain tumor detection (Healthy vs. Tumor)** using complementary CT and MRI information.
+- Vision Mamba Backbone
+- Shared Projection Head
+- Supervised Contrastive Learning
+- Prototype Cross-Attention
+- Learnable Prototypes
+- L2 Distance Classifier
+- Explainable AI (Grad-CAM++)
+- Attention Maps
+- Prototype Similarity Analysis
+- UMAP Visualization
+
+---
+
+#  Explainable AI (XAI)
+
+The framework incorporates multiple Explainable AI techniques to improve model interpretability.
+
+- Grad-CAM++
+- Attention Maps
+- Prototype Similarity Analysis
+- UMAP Feature Visualization
+
+These techniques help visualize the model's decision-making process and highlight clinically relevant image regions.
+
+---
+
+#  Key Features
+
+-  Multimodal Brain Tumor Detection (CT + MRI)
+-  Vision Mamba Feature Extraction
+-  Supervised Contrastive Learning
+-  Prototype Cross-Attention
+-  Learnable Prototypes
+-  L2 Distance Classification
+-  Explainable AI (Grad-CAM++)
+-  Attention Maps
+-  Prototype Similarity Analysis
+-  UMAP Visualization
+-  Binary Classification (Healthy vs. Tumor)
+
+---
+
+# 📊 Results
+
+The proposed multimodal framework is designed to provide accurate and interpretable **binary brain tumor detection** by effectively leveraging complementary information from CT and MRI modalities.
