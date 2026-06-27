@@ -7,34 +7,6 @@ This project uses two publicly available multimodal brain tumor datasets. Each d
 ## Dataset 1
 
 **Download Link:**  
-https://tinyurl.com/2rx35peu
-
-### Contents
-
-* CT Images
-  * Healthy
-  * Tumor
-* MRI Images
-  * Healthy
-  * Tumor
-
-### Dataset Description
-
-Dataset 1 consists of **22,782** multimodal brain images acquired from two imaging modalities for binary brain tumor classification.
-
-| Modality | Tumor | Healthy | Total |
-|----------|-------:|--------:|------:|
-| MRI | 5,900 | 5,600 | 11,500 |
-| CT | 5,662 | 5,620 | 11,282 |
-| **Total** | **11,562** | **11,220** | **22,782** |
-
-The dataset includes both **MRI** and **CT** brain images categorized into **Tumor** and **Healthy** classes. It provides a balanced multimodal collection that enables the proposed framework to learn complementary diagnostic information from both imaging modalities for binary brain tumor detection.
-
----
-
-## Dataset 2
-
-**Download Link:**  
 https://tinyurl.com/5jfvdwr9
 
 ### Contents
@@ -57,6 +29,33 @@ Dataset 2 consists of **9,618** multimodal brain images collected from **CT** an
 | **Total** | **5,318** | **4,300** | **9,618** |
 
 The dataset contains both **MRI** and **CT** brain images divided into **Tumor** and **Healthy** classes. Combining this dataset with Dataset 1 increases the diversity of imaging samples, improving the robustness and generalization capability of the proposed multimodal brain tumor detection framework.
+
+---
+## Dataset 2
+
+**Download Link:**  
+https://tinyurl.com/2rx35peu
+
+### Contents
+
+* CT Images
+  * Healthy
+  * Tumor
+* MRI Images
+  * Healthy
+  * Tumor
+
+### Dataset Description
+
+Dataset 1 consists of **22,782** multimodal brain images acquired from two imaging modalities for binary brain tumor classification.
+
+| Modality | Tumor | Healthy | Total |
+|----------|-------:|--------:|------:|
+| MRI | 5,900 | 5,600 | 11,500 |
+| CT | 5,662 | 5,620 | 11,282 |
+| **Total** | **11,562** | **11,220** | **22,782** |
+
+The dataset includes both **MRI** and **CT** brain images categorized into **Tumor** and **Healthy** classes. It provides a balanced multimodal collection that enables the proposed framework to learn complementary diagnostic information from both imaging modalities for binary brain tumor detection.
 
 ---
 
