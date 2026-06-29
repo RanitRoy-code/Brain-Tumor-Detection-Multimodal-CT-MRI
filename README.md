@@ -100,6 +100,33 @@ pip install -r requirements.txt
 6. Run all notebook cells sequentially from top to bottom.
 
 ---
+# Execution Environment
+This project was developed and tested using Google Colab with GPU acceleration enabled.
+
+Recommended Environment
+Platform: Google Colab
+
+Hardware Accelerator: GPU (T4, L4, A100, or any CUDA-enabled GPU)
+
+Python Version: 3.10+
+
+Deep Learning Framework: PyTorch
+
+Using Google Colab
+Open the notebook (Model_code.ipynb) in Google Colab.
+
+Navigate to Runtime → Change runtime type.
+
+Set Hardware accelerator to GPU.
+
+Install dependencies and run sequentially.
+
+Running on Local/Other Systems
+If you are using Jupyter Notebook, VS Code, or a local server setup, modify your device configuration if required. The notebook automatically detects your environment via PyTorch:
+
+
+device = torch.device("cuda" if torch.torch.cuda.is_available() else "cpu")
+If a CUDA-enabled GPU is unavailable, the model will gracefully fall back to the CPU (though training performance will be significantly reduced).
 
 #  Model Components
 
